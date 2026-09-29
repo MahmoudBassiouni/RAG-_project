@@ -1,2 +1,4 @@
 # RAG-_project
 Local Retrieval-Augmented Generation app for PDFs — Gemini API (free tier), ChromaDB, and Streamlit. Upload a PDF, ask questions, get grounded answers with cited source pages.
+
+A real, end-to-end RAG (Retrieval-Augmented Generation) application built entirely on free-tier tools — no paid APIs, no cloud vector DB. Upload one or more PDFs, and the app extracts, cleans, and chunks the text, embeds it with the Gemini API, and stores it in a local ChromaDB index. Ask a question and it retrieves the most relevant chunks via semantic similarity, then prompts Gemini to answer strictly from that retrieved context — with the answer citing exact source pages and a debug panel showing every retrieved chunk. Built with a modular architecture (separate ingestion, chunking, embedding, retrieval, and generation stages), retry/backoff handling for free-tier rate limits, and a Streamlit GUI.
